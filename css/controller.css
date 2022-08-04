@@ -6,30 +6,36 @@ body {
   min-height: 100vh;
 }
 .control {
-  width: 50rem;
-  height: 18rem;
-  border-radius: 2rem;
+  width: 22rem;
+  height: 80vh;
   background-color: black;
+  border-radius: 2rem;
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
 }
 h1 {
-  margin: 2rem 0;
   text-align: center;
+  transform: rotate(-90deg);
   color: red;
   font-size: 3rem;
 }
 .wrapperButtons {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
 }
 button {
+  transform: rotate(-90deg);
   width: 6rem;
   height: 6rem;
   border: none;
   border-radius: 1rem;
   background-color: gray;
+  text-align: center;
 }
 .buttonMove {
   font-size: 4rem;
@@ -38,18 +44,39 @@ button {
 .buttonMove:hover {
   transform: scale(0.8);
 }
-.ButtonShoot p {
-  width: 100%;
-  height: 100%;
+.ButtonShoot {
+  width: 6rem;
+  height: 6rem;
   background-color: red;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   color: white;
 }
-.ButtonShoot p:hover {
+.ButtonShoot:hover {
   cursor: pointer;
   transform: scale(0.8);
+}
+@media (min-width: 768px) {
+  .control {
+    grid-template-columns: unset;
+    width: 50rem;
+    height: 18rem;
+    grid-template-rows: 1fr 2fr;
+  }
+  h1 {
+    transform: unset;
+    margin: 2rem 0;
+  }
+  .wrapperButtons {
+    width: unset;
+    height: unset;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  button {
+    transform: unset;
+  }
 }
