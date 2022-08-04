@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/score.css">
+    <title>Mejores puntajes</title>
+</head>
+<body>
+    <h1>Registro de puntajes</h1>
+    <form>
+        <div>
+            <label>Nombre del jugador:</label>
+            <input type="text" placeholder="tu nombre de jugador" id="playerName" maxlength="20">
+        </div>
+        <button id="actionButton">Registrar</button>
+    </form>
+    <main>
+        <h2>Top 10 mejores puntajes</h2>
+        <ol id="orderlist"></ol>
+    </main>
+   <div class="wrapperlink">
+    <a href="./index.html" class="link">Jugar una partida</a>
+   </div>
+</body>
+<script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="./js/Score/helpers.js"></script>
+<script src="./js/Score/index.js"></script>
+</html>

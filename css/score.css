@@ -1,0 +1,123 @@
+body {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 2rem 0;
+}
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+form {
+  max-width: 45rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+form label {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+form input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: solid 1px #fff;
+  color: #fff;
+  width: 12rem;
+  transition: width ease-in-out 0.5s;
+}
+form input:focus {
+  border: solid 1px #612897;
+  width: 14rem;
+  color: #fff;
+  outline: none;
+}
+
+form button {
+  border: solid 2px #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+form button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+}
+.wrapperlink {
+  max-width: 45rem;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: solid 2px #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  animation: flash infinite alternate 0.6s;
+}
+.link:hover {
+  animation: unset;
+  color: black;
+  background-color: #fff;
+}
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border: solid 1px #fff;
+  border-radius: 0.5rem;
+}
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+main ol {
+  width: 100%;
+}
+ol li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dotted 2px #fff;
+}
+ol .no-data {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+ol li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+ol li .name {
+  position: absolute;
+  background-color: black;
+  left: 0;
+  bottom: -0.2rem;
+}
+ol li .points {
+  position: absolute;
+  background-color: black;
+  right: 0;
+  bottom: -0.2rem;
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

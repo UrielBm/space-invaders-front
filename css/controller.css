@@ -1,0 +1,55 @@
+body {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.control {
+  width: 50rem;
+  height: 18rem;
+  border-radius: 2rem;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+h1 {
+  margin: 2rem 0;
+  text-align: center;
+  color: red;
+  font-size: 3rem;
+}
+.wrapperButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+button {
+  width: 6rem;
+  height: 6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: gray;
+}
+.buttonMove {
+  font-size: 4rem;
+  color: white;
+}
+.buttonMove:hover {
+  transform: scale(0.8);
+}
+.ButtonShoot p {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+.ButtonShoot p:hover {
+  cursor: pointer;
+  transform: scale(0.8);
+}

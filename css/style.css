@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --white: #ffffff;
+  /* colores vars */
+  --primary: #4c0027;
+  --second: #612897;
+}
+html {
+  font-family: "Space Mono", monospace;
+}
+.wrapperHero {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperHero .titleGame {
+  width: 30rem;
+  text-align: center;
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  line-height: 1.4em;
+}
+.titleGame .gradient {
+  color: transparent;
+  background: linear-gradient(to right, var(--primary) 0%, var(--second) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.wrapperHero .actionLink {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border: solid 1px var(--white);
+  padding: 0.5rem 1rem;
+  animation: flash infinite alternate 0.6s;
+}
+.wrapperHero .actionLink:hover {
+  animation: unset;
+  background: var(--white);
+  color: #000000;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

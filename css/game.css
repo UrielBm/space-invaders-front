@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapperGame {
+  position: relative;
+}
+.data {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  left: 20px;
+  top: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.data p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+p .right {
+  color: green;
+}
+p .warning {
+  color: yellow;
+}
+p .danger {
+  color: red;
+}
