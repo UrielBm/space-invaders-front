@@ -42,7 +42,7 @@ button {
   color: white;
 }
 .buttonMove:hover {
-  transform: scale(0.8);
+  transform: rotate(-90deg) scale(0.8);
 }
 .ButtonShoot {
   width: 6rem;
@@ -75,6 +75,9 @@ button {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+  .buttonMove:hover {
+    transform: scale(0.8);
   }
   button {
     transform: unset;
