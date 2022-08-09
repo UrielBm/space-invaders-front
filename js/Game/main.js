@@ -37,7 +37,7 @@ for (let i = 0; i < 100; i++) {
 window.onload = () => {
   socket.emit("session", { sessionGame });
   socket.on("move-ship", (data) => {
-    console.log(data);
+    // console.log(data); data del socket que escucha
     if (sessionGame === data.sessionGame) {
       const { code } = data;
       switch (code) {
@@ -256,7 +256,6 @@ addEventListener("keyup", ({ keyCode }) => {
       keys.left.status = false;
       break;
     case 32:
-      console.log("shoot");
       keys.shoot.status = false;
       break;
   }

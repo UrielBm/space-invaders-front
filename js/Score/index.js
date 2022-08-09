@@ -13,7 +13,7 @@ actionButton.addEventListener("click", async (e) => {
     handleAlertNameEmpety();
   } else {
     const playerData = await handleDoRegister(playerName.value, score);
-    console.log(playerData);
+    // console.log(playerData); return de la data del registro
     if (playerData.status) {
       handleRightRegister(
         playerData.register.gamertag,
