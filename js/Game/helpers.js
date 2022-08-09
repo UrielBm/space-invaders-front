@@ -34,8 +34,9 @@ const handleAlertGameOver = (puntos) => {
       const url = window.location.href.replace("game.html", "bestscores.html");
       window.location.href = url;
     } else {
-      const url = window.location.href.replace("game.html", "index.html");
-      window.location.href = url;
+      // const url = window.location.href.replace("game.html", "index.html");
+      // window.location.href = url;
+      window.location.reload();
     }
   });
 };
