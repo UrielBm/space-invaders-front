@@ -18,7 +18,7 @@ html {
   align-items: center;
 }
 .wrapperHero .titleGame {
-  width: 30rem;
+  max-width: 30rem;
   text-align: center;
   color: var(--white);
   font-size: 3.5rem;
