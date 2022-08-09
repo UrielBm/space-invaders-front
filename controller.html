@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="twitter:title" content="Space-Invaders game" />
+    <meta property="twitter:card" content="website" />
+    <meta property="twitter:description" content="Prueba de cocepto de juego spaces-invaders, uso de sockets para control y registro de top 10"
+    <meta property="twitter:creator" content="@CouthUriel"
+    <meta property="og:url" content="https://space-invaders-front.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/controller.css" />
     <title>controller</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="control">
-        <h1>Nintendo</h1>
-        <div class="wrapperButtons">
-            <button id="moveleft" class="buttonMove">&#x276E;</button>
-            <button id="moveright" class="buttonMove">&#x276F;</button>
-            <button id="actionShoot" class="ButtonShoot">✕</button>
-        </div>
+      <h1>Nintendo</h1>
+      <div class="wrapperButtons">
+        <button id="moveleft" class="buttonMove">&#x276E;</button>
+        <button id="moveright" class="buttonMove">&#x276F;</button>
+        <button id="actionShoot" class="ButtonShoot">✕</button>
+      </div>
     </div>
-</body>
-<script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
-<script src="./js/controller/controller.js"></script>
+  </body>
+  <script
+    src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+    integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/controller/controller.js"></script>
 </html>
