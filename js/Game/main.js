@@ -1,4 +1,5 @@
 const socket = io("https://spaces-invaders-game.herokuapp.com/");
+const sessionGame = sessionStorage.getItem("sessionGame");
 const player = new Player();
 const projectiles = [];
 const grids = [];
@@ -34,32 +35,36 @@ for (let i = 0; i < 100; i++) {
   );
 }
 window.onload = () => {
+  socket.emit("session", { sessionGame });
   socket.on("move-ship", (data) => {
-    const { code } = data;
-    switch (code) {
-      case 39:
-        keys.left.status = false;
-        keys.right.status = true;
-        break;
-      case 37:
-        keys.right.status = false;
-        keys.left.status = true;
-        break;
-      case 32:
-        projectiles.push(
-          new proyectile({
-            position: {
-              x: player.position.x + player.width / 2,
-              y: player.position.y,
-            },
-            velocity: {
-              x: 0,
-              y: -8,
-            },
-          })
-        );
-        keys.shoot.status = true;
-        break;
+    console.log(data);
+    if (sessionGame === data.sessionGame) {
+      const { code } = data;
+      switch (code) {
+        case 39:
+          keys.left.status = false;
+          keys.right.status = true;
+          break;
+        case 37:
+          keys.right.status = false;
+          keys.left.status = true;
+          break;
+        case 32:
+          projectiles.push(
+            new proyectile({
+              position: {
+                x: player.position.x + player.width / 2,
+                y: player.position.y,
+              },
+              velocity: {
+                x: 0,
+                y: -8,
+              },
+            })
+          );
+          keys.shoot.status = true;
+          break;
+      }
     }
   });
 };
