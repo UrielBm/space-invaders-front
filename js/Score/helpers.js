@@ -43,7 +43,7 @@ const handleStatusError = () => {
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
-      const url = window.location.href.replace("bestscores.html", "index.html");
+      const url = "https://space-invaders-front.vercel.app";
       window.location.href = url;
     }
   });
