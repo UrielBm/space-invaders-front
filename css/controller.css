@@ -3,11 +3,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
+  height: 85vh;
+  overflow: hidden !important;
 }
 .control {
   width: 95%;
-  min-height: 99.5vh;
+  height: 100%;
   border: 2px solid black;
   border-radius: 2rem;
   display: grid;
