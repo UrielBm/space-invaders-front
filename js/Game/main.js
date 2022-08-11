@@ -44,10 +44,16 @@ window.onload = () => {
         case 39:
           keys.left.status = false;
           keys.right.status = true;
+          setTimeout(() => {
+            keys.right.status = false;
+          }, 200);
           break;
         case 37:
           keys.right.status = false;
           keys.left.status = true;
+          setTimeout(() => {
+            keys.left.status = false;
+          }, 200);
           break;
         case 32:
           projectiles.push(
