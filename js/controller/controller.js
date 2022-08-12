@@ -1,8 +1,16 @@
-const socket = io("https://spaces-invaders-game.herokuapp.com/");
+// constante y variables del control
+
+const socket = io("http://localhost:3000/");
 const moveleft = document.querySelector("#moveleft");
 const moveRight = document.querySelector("#moveright");
+const buttonPlay = document.querySelector("#play");
+const buttonPause = document.querySelector("#pause");
 const actionShooting = document.querySelector("#actionShoot");
 const sessionGame = window.location.href.split("?id=");
+let status = false;
+
+//funciones para el control
+
 moveleft.addEventListener("click", () => {
   //console.log("movimiento a la izquierda");
   socket.emit("action-ship", {
@@ -24,4 +32,21 @@ actionShooting.addEventListener("click", () => {
     code: 32,
     sessionGame: sessionGame[1],
   });
+});
+
+buttonPlay.addEventListener("click", () => {
+  socket.emit("event-start", {
+    sessionGame: sessionGame[1],
+  });
+});
+buttonPause.addEventListener("click", () => {
+  //pausar el juego
+  socket.emit("pause", {
+    pause: !status,
+    sessionGame: sessionGame[1],
+  });
+  status
+    ? (buttonPause.innerHTML = `<span>&#9208;</span>Pausar`)
+    : (buttonPause.innerHTML = `<span>&#9656;</span>Jugar`);
+  status = !status;
 });
