@@ -1,5 +1,5 @@
 //variables del Qr y del socket
-const socket = io("http://localhost:3000/");
+const socket = io("https://spaces-invaders-game.herokuapp.com/");
 let url = window.location.href;
 const sessionGame = Math.random().toString(16).slice(2);
 sessionStorage.setItem("sessionGame", sessionGame);

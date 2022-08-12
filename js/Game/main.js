@@ -1,5 +1,5 @@
-// const socket = io("https://spaces-invaders-game.herokuapp.com/");
-const socket = io("http://localhost:3000/");
+const socket = io("https://spaces-invaders-game.herokuapp.com/");
+// const socket = io("http://localhost:3000/");
 const sessionGame = sessionStorage.getItem("sessionGame");
 const player = new Player();
 const projectiles = [];

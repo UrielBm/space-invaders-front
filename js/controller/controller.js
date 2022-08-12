@@ -1,6 +1,6 @@
 // constante y variables del control
 
-const socket = io("http://localhost:3000/");
+const socket = io("https://spaces-invaders-game.herokuapp.com/");
 const moveleft = document.querySelector("#moveleft");
 const moveRight = document.querySelector("#moveright");
 const buttonPlay = document.querySelector("#play");
