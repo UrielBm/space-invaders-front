@@ -45,8 +45,5 @@ buttonPause.addEventListener("click", () => {
     pause: !status,
     sessionGame: sessionGame[1],
   });
-  status
-    ? (buttonPause.innerHTML = `<span>&#9208;</span>Pausar`)
-    : (buttonPause.innerHTML = `<span>&#9656;</span>Jugar`);
   status = !status;
 });
