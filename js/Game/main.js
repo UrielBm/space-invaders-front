@@ -1,4 +1,5 @@
-const socket = io("https://spaces-invaders-game.herokuapp.com/");
+// const socket = io("https://spaces-invaders-game.herokuapp.com/");
+const socket = io("http://localhost:3000/");
 const sessionGame = sessionStorage.getItem("sessionGame");
 const player = new Player();
 const projectiles = [];
@@ -71,6 +72,12 @@ window.onload = () => {
           keys.shoot.status = true;
           break;
       }
+    }
+  });
+  socket.on("action-pause", (data) => {
+    if (sessionGame === data.sessionGame) {
+      game.active = !data.pause;
+      data.pause ? handleAlertPause() : animate();
     }
   });
 };
