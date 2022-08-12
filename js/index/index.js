@@ -3,7 +3,7 @@ const socket = io("http://localhost:3000/");
 let url = window.location.href;
 const sessionGame = Math.random().toString(16).slice(2);
 sessionStorage.setItem("sessionGame", sessionGame);
-console.log(`${url}controller.html?id=${sessionGame}`);
+// console.log(`${url}controller.html?id=${sessionGame}`);
 
 //creación del código Qr
 
