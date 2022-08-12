@@ -40,3 +40,16 @@ const handleAlertGameOver = (puntos) => {
     }
   });
 };
+
+const handleAlertPause = () => {
+  Swal.fire({
+    title: "Juego en pausa",
+    text: `Haz puesto pausa al juego, quita la pausa para continuar`,
+    background: "#000000",
+    color: "#ffffff",
+    imageUrl: "./../assets/gameover.gif",
+    imageAlt: "imagen de pausa",
+    showConfirmButton: false,
+    timer: 2000,
+  });
+};
