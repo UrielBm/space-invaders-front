@@ -77,7 +77,11 @@ window.onload = () => {
   socket.on("action-pause", (data) => {
     if (sessionGame === data.sessionGame) {
       game.active = !data.pause;
-      data.pause && danger < 100 ? handleAlertPause() : animate();
+      data.pause && danger < 100
+        ? handleAlertPause()
+        : danger >= 100
+        ? null
+        : animate();
     }
   });
 };
