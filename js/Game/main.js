@@ -80,7 +80,7 @@ window.onload = () => {
       data.pause && danger < 100
         ? handleAlertPause()
         : danger >= 100
-        ? null
+        ? ((game.over = true), (game.active = false), handleAlertGameOver())
         : animate();
     }
   });
