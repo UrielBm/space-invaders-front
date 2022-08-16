@@ -76,12 +76,20 @@ window.onload = () => {
   });
   socket.on("action-pause", (data) => {
     if (sessionGame === data.sessionGame) {
-      game.active = !data.pause;
-      data.pause && danger < 100
-        ? handleAlertPause()
-        : danger >= 100
-        ? ((game.over = true), (game.active = false), handleAlertGameOver())
-        : animate();
+      if (danger < 100) {
+        game.active = !data.pause;
+        data.pause ? handleAlertPause() : animate();
+      }
+    }
+  });
+  socket.on("start", (data) => {
+    if (danger < 100) {
+      game.active = false;
+      data.data ? window.location.reload() : handleAlertReintentar(),
+        setTimeout(() => {
+          game.active = true;
+          animate();
+        }, 3100);
     }
   });
 };

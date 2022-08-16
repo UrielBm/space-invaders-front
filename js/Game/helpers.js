@@ -53,3 +53,16 @@ const handleAlertPause = () => {
     timer: 2000,
   });
 };
+
+const handleAlertReintentar = () => {
+  Swal.fire({
+    title: "Reintentar",
+    text: "¿estas seguro de reitentar y reniciar el juego?, si es así presiona otra vez reintentar",
+    background: "#000000",
+    color: "#ffffff",
+    imageUrl: "./../assets/gameover.gif",
+    imageAlt: "imagen de reintentar",
+    showConfirmButton: false,
+    timer: 3000,
+  });
+};
