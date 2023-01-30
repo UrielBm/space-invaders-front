@@ -1,7 +1,7 @@
 const handeGetRecords = async () => {
   try {
     const response = await fetch(
-      "https://spaces-invaders-game.herokuapp.com/bestplaces",
+      "https://spaceinvadersgameback-production.up.railway.app/bestplaces",
       {
         method: "GET",
         mode: "cors",
@@ -79,7 +79,7 @@ const handleRightRegister = (gamertag, score, position) => {
 const handleDoRegister = async (gamertag, score) => {
   try {
     let response = await fetch(
-      "https://spaces-invaders-game.herokuapp.com/registerrecord",
+      "https://spaceinvadersgameback-production.up.railway.app/registerrecord",
       {
         method: "POST",
         mode: "cors",
