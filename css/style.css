@@ -53,7 +53,10 @@ html {
   background: var(--white);
   color: #000000;
 }
-
+.wrapper-qr-code {
+  background-color: var(--primary);
+  padding: 0.2rem;
+}
 @keyframes flash {
   0% {
     opacity: 0;
