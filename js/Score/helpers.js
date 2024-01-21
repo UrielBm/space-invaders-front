@@ -1,7 +1,7 @@
 const handeGetRecords = async () => {
   try {
     const response = await fetch(
-      "https://spaceinvadersgameback-production.up.railway.app/bestplaces",
+      "https://space-invaders-back.onrender.com/bestplaces",
       {
         method: "GET",
         mode: "cors",
@@ -79,7 +79,7 @@ const handleRightRegister = (gamertag, score, position) => {
 const handleDoRegister = async (gamertag, score) => {
   try {
     let response = await fetch(
-      "https://spaceinvadersgameback-production.up.railway.app/registerrecord",
+      "https://space-invaders-back.onrender.com/registerrecord",
       {
         method: "POST",
         mode: "cors",

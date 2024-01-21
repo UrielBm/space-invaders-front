@@ -1,6 +1,6 @@
 // constante y variables del control
 // const socket = io("http://localhost:3000/");
-const socket = io("https://spaceinvadersgameback-production.up.railway.app/");
+const socket = io("https://space-invaders-back.onrender.com");
 const moveleft = document.querySelector("#moveleft");
 const moveRight = document.querySelector("#moveright");
 const buttonPlay = document.querySelector("#play");
