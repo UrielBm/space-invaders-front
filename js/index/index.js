@@ -1,6 +1,6 @@
 //variables del Qr y del socket
 // const socket = io("http://localhost:3000/");
-const socket = io("https://space-invaders-back.onrender.com");
+const socket = io("https://spaceinvadersgameback-production.up.railway.app");
 let url = window.location.href;
 const sessionGame = Math.random().toString(16).slice(2);
 sessionStorage.setItem("sessionGame", sessionGame);

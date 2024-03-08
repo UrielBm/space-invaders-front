@@ -1,4 +1,4 @@
-const socket = io("https://space-invaders-back.onrender.com");
+const socket = io("https://spaceinvadersgameback-production.up.railway.app");
 // const socket = io("http://localhost:3000/");
 const sessionGame = sessionStorage.getItem("sessionGame");
 const player = new Player();
