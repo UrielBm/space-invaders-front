@@ -9,7 +9,7 @@ html {
   font-family: "Space Mono", monospace;
 }
 .wrapperHero {
-  background-color: black;
+  background-color: rgb(24, 23, 23);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -54,7 +54,6 @@ html {
   color: #000000;
 }
 .wrapper-qr-code {
-  background-color: var(--primary);
   padding: 0.2rem;
 }
 @keyframes flash {
